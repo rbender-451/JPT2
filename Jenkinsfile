@@ -21,7 +21,7 @@ pipeline {
      }
    stage('git ver') {
     steps {
-     sh 'git -version'
+     sh 'git --version'
     }
    }
   }
