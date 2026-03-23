@@ -8,7 +8,6 @@ pipeline {
     stage('Hello') {
       steps {
         echo "hello"
-       sh 'groovy HelloWorld.groovy'
       }
     }
   }
