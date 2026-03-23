@@ -19,5 +19,10 @@ pipeline {
        }
       }
      }
+   stage('git ver') {
+    steps {
+     sh 'git -version'
+    }
+   }
   }
 }
