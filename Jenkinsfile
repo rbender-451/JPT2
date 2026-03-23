@@ -9,7 +9,8 @@ pipeline {
       steps {
         echo "hello"
       }
-     stage('Load Local File') {
+    }
+   stage('Load Local File') {
       steps {
        script {
         def utils = load '/home/pulsepointer/Documents/HelloWorld.groovy'
@@ -18,6 +19,5 @@ pipeline {
        }
       }
      }
-    }
   }
 }
