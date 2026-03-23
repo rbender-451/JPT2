@@ -10,13 +10,5 @@ pipeline {
         echo "hello"
       }
     }
-   stage('list folders') {
-    steps {
-     script {
-      def folderList = sh(script: "ls -d */", returnStdout: true).trim()
-      echo "Folders found: ${folderList}"
-     }
-    }
-   }
   }
 }
