@@ -8,8 +8,15 @@ pipeline {
     stage('Hello') {
       steps {
         echo "hello"
-       sh 'ls -d */'
       }
     }
+   stage('list folders') {
+    steps {
+     script {
+      def folderList = sh(script: "ls -d */", returnStdout: true).trim()
+      echo "Folders found: ${folderList}"
+     }
+    }
+   }
   }
 }
